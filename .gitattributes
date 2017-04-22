@@ -1,1 +1,2 @@
 *.rb linguist-language=Java
+*.scss filter=lfs diff=lfs merge=lfs -text
