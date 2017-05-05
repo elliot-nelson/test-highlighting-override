@@ -16,3 +16,19 @@ $bar = function($foo) {
 $baz = array('one');
 $baz['two'] = FALSE;
 ```
+
+## With php Tags
+
+```php
+<?php
+	require_once "support/http.php";
+
+	$url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+	$parts = HTTP::ExtractURL($url);
+	if ($parts["host"] === "www.youtube.com" && isset($parts["queryvars"]["v"]))
+	{
+		$videoid = $parts["queryvars"]["v"];
+		if ($videoid === "dQw4w9WgXcQ")  echo "You're going to love this!";
+	}
+?>
+```
